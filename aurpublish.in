@@ -144,7 +144,7 @@ if (( PULL_SUBTREE )); then
         git subtree split -P "${package}" --rejoin
         git subtree pull -P "${package}" aur:${pkgbase}.git master -m "Merge subtree '${package}'"
     else
-        git subtree add -P "${package}" aur:${package}.git master
+        git subtree add -P "${package}" aur:${package}.git master -m "Merge subtree '${package}'"
     fi
     exit 0
 fi
